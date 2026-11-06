@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTORIAL</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+
+    <div class="banner"></div>
+    <nav class="navbar">
+        <ul class="menu-principal">
+            <li><a href="../inicio.html">Inicio</a></li>
+            <li>
+                <a href="#">Funciones Matematicas</a>
+                <ul class="dropdown">
+                    
+                    <li><a href="#">FACTORIAL</a></li>
+                    <li><a href="fibonacci.html">FIBONACCI</a></li>
+                    <li><a href="nprimo.html">N.PRIMOS</a></li>
+                    <li><a href="ecsgdogrado.html">EC.SGDO GRADO</a></li>
+                    <li><a href="nperfecto.html">N.PERFECTO</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Funcion cadenas</a>
+                <ul class="dropdown">
+                    <li><a href="../cadenas/palindromo.html">PALINDROMO</a></li>
+                    <li><a href="../cadenas/primer.html">PRIMER LETRA</a></li>
+                    <li><a href="../cadenas/buscaryreemp.html">BUSCAR Y REEMPLAZAR</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Funcion de fecha y hora</a>
+                <ul class="dropdown">
+                    <li><a href="../fecha y hora/fecha.html">Fecha de hoy</a></li>
+                    <li><a href="../fecha y hora/reloj.html">RELOJ</a></li>
+                    <li><a href="../fecha y hora/transcurso.html">TRANSCURSO</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Funcion con  Arrays</a>
+                <ul class="dropdown">
+                    <li><a href="../arrays/aumentar.html">AUMENTAR</a></li>
+                    <li><a href="../arrays/girar.html">GIRAR</a></li>
+                    <li><a href="../arrays/minusmayus.html">MINUS Y MAYUS</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+   <div class="seccion-factorial">
+    <h2>FACTORIAL DE UN NÚMERO</h2>
+    <form action="#" method="post">
+        <label for="n"><b>Introduzca el número (N):</b></label>
+        <input type="number" id="n" min="0" placeholder="Ej. 5">
+        <input type="button" value="Calcular Factorial" onclick="fact()">
+        <hr>
+        <h3>RESULTADO:</h3>
+        <div id="rf">...</div>
+    </form>
+</div>
+    </section>
+    <footer class="pie-pagina">
+        <div class="footer-contenedor">
+            <div class="footer-col">
+                <div class="icono-footer">📞</div>
+                <div>
+                    <strong>Teléfono</strong>
+                    <span>T: 788-166-50</span>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <div class="icono-footer">✉️</div>
+                <div>
+                    <strong>Contacto</strong>
+                    <span>mijaeltarqui@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <div class="icono-footer">➕</div>
+                <div>
+                    <strong>Redes Sociales</strong>
+                    <span class="redes-iconos">f t g+</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <div class="icono-footer">©</div>
+                <div>
+                    <strong>Propiedad</strong>
+                    <span>© 2026 Mijael Ticona Tarqui.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="../js/funciones.js"></script>
