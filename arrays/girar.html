@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUMENTAR</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+
+    <div class="banner"></div>
+    <nav class="navbar">
+        <ul class="menu-principal">
+            <li><a href="../inicio.html">Inicio</a></li>
+           <li>
+                <a href="#">Funciones Matematicas</a>
+                <ul class="dropdown">
+                    
+                    <li><a href="../mate/facto.html">FACTORIAL</a></li>
+                    <li><a href="../mate/fibonacci.html">FIBONACCI</a></li>
+                    <li><a href="../mate/nprimo.html">N.PRIMOS</a></li>
+                    <li><a href="../mate/ecsgdogrado.html">EC.SGDO GRADO</a></li>
+                    <li><a href="../mate/nperfecto.html">N.PERFECTO</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Funcion cadenas</a>
+                <ul class="dropdown">
+                    <li><a href="../cadenas/palindromo.html">PALINDROMO</a></li>
+                    <li><a href="../cadenas/primer.html">PRIMER LETRA</a></li>
+                    <li><a href="../cadenas/buscaryreemp.html">BUSCAR Y REEMPLAZAR</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Funcion de fecha y hora</a>
+                <ul class="dropdown">
+                    <li><a href="../fecha y hora/fecha.html">Fecha de hoy</a></li>
+                    <li><a href="../fecha y hora/reloj.html">RELOJ</a></li>
+                    <li><a href="../fecha y hora/transcurso.html">TRANSCURSO</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Funcion con  Arrays</a>
+                <ul class="dropdown">
+                    <li><a href="aumentar.html">AUMENTAR</a></li>
+                    <li><a href="#">GIRAR</a></li>
+                    <li><a href="minusmayus.html">MINUS Y MAYUS</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="seccion-rotar">
+    <h2>GIRAR ELEMENTOS DEL VECTOR</h2>
+    <form onsubmit="return false;">
+        <label for="txtR"><b>Adicione los elementos a un vector:</b></label>
+        <input type="text" id="txtR" placeholder="Ej. manzana">
+        
+        <div class="grupo-botones">
+            <input type="button" value="Adicionar" onclick="add()">
+            <input type="button" value="Girar a la izquierda" onclick="giz()">
+            <input type="button" value="Girar a la derecha" onclick="gde()">
+        </div>
+
+        <h3>RESULTADO:</h3>
+        <div id="resR">[]</div>
+    </form>
+</div>
+
+    </section>
+    <footer class="pie-pagina">
+        <div class="footer-contenedor">
+            <div class="footer-col">
+                <div class="icono-footer">📞</div>
+                <div>
+                    <strong>Teléfono</strong>
+                    <span>T: 788-166-50</span>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <div class="icono-footer">✉️</div>
+                <div>
+                    <strong>Contacto</strong>
+                    <span>mijaeltarqui@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <div class="icono-footer">➕</div>
+                <div>
+                    <strong>Redes Sociales</strong>
+                    <span class="redes-iconos">f t g+</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <div class="icono-footer">©</div>
+                <div>
+                    <strong>Propiedad</strong>
+                    <span>© 2026 Mijael Ticona Tarqui.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    var v = [];
+
+    function add() {
+        let x = document.getElementById('txtR').value;
+        if (x !== "") {
+            v.push(x);
+            document.getElementById('txtR').value = "";
+            ver();
+        }
+    }
+
+    function giz() {
+        if (v.length > 0) {
+            let a = v.shift();
+            v.push(a);
+            ver();
+        }
+    }
+
+    function gde() {
+        if (v.length > 0) {
+            let a = v.pop();
+            v.unshift(a);
+            ver();
+        }
+    }
+
+    function ver() {
+        let t = "[";
+        for (let i = 0; i < v.length; i++) {
+            if (i === 0) {
+                t = t + '"' + v[i] + '"';
+            } else {
+                t = t + ',"' + v[i] + '"';
+            }
+        }
+        t = t + "]";
+        document.getElementById('resR').innerText = t;
+    }
+</script>
